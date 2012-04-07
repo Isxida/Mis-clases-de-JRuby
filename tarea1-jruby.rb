@@ -10,8 +10,8 @@ class Tarea1 < Java::javax.swing.JFrame
 		txtpassword = Java::javax.swing.JPasswordField.new('')
 		lblMessage = Java::javax.swing.JLabel.new('Message : ')
 		txtMessage = Java::javax.swing.JTextField.new('')
-		Enviarbtn = Java::java.swing.Button.new('Enviar')
-		Limpiarbtn = Java::java.swing.Button.new('Limpiar')
+		Enviarbtn = Java::java.awt.Button.new('Enviar') #error aqui?
+		Limpiarbtn = Java::java.awt.Button.new('Limpiar')
 		panel = Java::java.awt.Panel.new
 		panel.add(titulo1)
 		panel.add(lblloginid)
@@ -33,7 +33,7 @@ class Enviarclick
 		include Java::Java.awt.event.ActionListener
 
 		def actionPerformed(e)
-			txtMessage.set("Registro completado")
+			txtMessage.set "Registro completado"
 		end
 	end
 
