@@ -15,6 +15,7 @@ class Tarea1 < Java::javax.swing.JFrame
 		panel = Java::java.awt.Panel.new
 		panel.setLayout nil
 		enviarbtn.add_action_listener Enviarclick.new
+		limpiarbtn.add_action_listener Limpiartodo.new
 		titulo1.setBounds 20,20,220,30
 		lblloginid.setBounds 20,50,120,30
 		txtloginid.setBounds 170,50,120,30
@@ -46,7 +47,18 @@ class Enviarclick
 		include Java::Java.awt.event.ActionListener
 
 		def actionPerformed(e)
-			puts "Registro completado "+txtloginid.getText()
+			txtMessage.set = "Hola!"
+		end
+	end
+
+class Limpiartodo
+		#Limpiar txt!
+		include Java::Java.awt.event.ActionListener
+
+		def actionPerformed(e)
+			txtloginid.set ""
+			txtpassword.set ""
+			txtMessage.set ""
 		end
 	end
 
